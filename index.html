@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy and Cybercrime Reflection</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        p, strong {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        #word-count {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+        }
+        blockquote {
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 20px 0;
+            border-left: 3px solid #e74c3c;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="word-count"></div>
+    <div class="container" id="container"></div>
+
+    <py-script>
+        from js import document
+        
+        content = """
+        <h1>Reflection on Data Privacy and Cybercrime</h1>
+        <p>
+            Attending the presentation on the Data Privacy Act of 2012 (RA 10173) and learning about cybercrime in the Philippines, led by <strong>PCOL JAY D GUILLERMO</strong>, Chief of the Cyber Response Unit of the Philippine National Police Anti-Cybercrime Group (PNP ACG), was both helpful and enjoyable. As an IT student, I knew data security was important, but this event made me understand how serious it really is. The fun parts like the Q&A session and the cash prize roulette at the end made it even more exciting, but I learned a lot from the discussions.
+        </p>
+        <p>
+            One of the things that stood out to me was how organizations must get <strong>direct consent</strong> before collecting personal information. This means companies need to ask for permission before using anyone’s data, and it made me think about how much of my personal information I’ve shared online. Knowing that the law gives me the right to control how my data is used made me feel safer. I realized that in the future, when I work in IT, I need to always consider how to protect people’s data and make sure they know what’s being done with it.
+        </p>
+        <p>
+            The presentation also talked about <strong>data security</strong>, which I found very important. It’s easy to collect data, but keeping it safe is a big responsibility. If a company fails to protect personal data and there is a breach, they must notify both the person affected and the <strong>National Privacy Commission (NPC)</strong>. This part made me feel better because it shows that if something bad happens, there are rules in place to help protect us. As an IT student, this made me think about how careful I need to be in handling sensitive information, especially when I start working in the industry.
+        </p>
+        <p>
+            Another interesting topic was how privacy still applies even after a person has died. I didn’t know that the data of a person who has passed away can still be accessed by their lawful heirs, but it makes sense that privacy should be respected, even after death. This made me realize that data is not just information—it represents a person’s life, so we should handle it with care.
+        </p>
+        <p>
+            The discussion on <strong>cybercrime</strong> in the Philippines was also important. With more people using the internet for banking, shopping, and social media, cybercrime is becoming more common. Crimes like hacking, identity theft, and online fraud are big problems today, and the <strong>Cybercrime Prevention Act of 2012</strong> was created to stop these issues. As an IT student, I felt it was a reminder that part of my job in the future will be to create safe systems that help protect people from these kinds of attacks.
+        </p>
+        <p>
+            The presentation also talked about <strong>accountability</strong>—that organizations are responsible for protecting personal data. If they don’t, they can face legal consequences. This showed me how important it is to take data security seriously, and it’s something I will definitely remember when I start working in IT.
+        </p>
+        <blockquote>
+            “Stay safe online: Protect your data, protect yourself and know your rights.”
+        </blockquote>
+        <p>
+            Overall, the presentation helped me understand how data privacy and cybercrime affect everyone. It wasn’t just about laws and rules—it was about protecting people and making sure their personal information is safe. I enjoyed the event because it was both educational and fun, especially with the interactive parts and the prizes. <strong>PCOL JAY D GUILLERMO</strong>’s insights gave me a better understanding of my future responsibilities as an IT professional in the Philippines.
+        </p>
+        """
+        
+        # Insert content into the container
+        container = document.getElementById("container")
+        container.innerHTML = content
+        
+        # Calculate and display word count
+        word_count = len(content.split())
+        document.getElementById("word-count").innerHTML = f"Word Count: {word_count}"
+    </py-script>
+</body>
+</html>
